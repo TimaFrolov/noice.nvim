@@ -72,6 +72,9 @@ function NuiView:update_options()
         if self._opts.anchor:find("S") and row then
           self._opts.position.row = -row + 1
         end
+        if self._opts.border.style and self._opts.border.style ~= 'none' then
+          self._opts.position.row = self._opts.position.row + 1
+        end
         if self._opts.anchor:find("E") and col then
           self._opts.position.col = -col
         end
